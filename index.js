@@ -123,8 +123,8 @@ function makePersonObject(id , name , email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  return 'Hello, my name is '+ name;
+function getName(person) {
+  return 'Hello, my name is '+ person.name;
 }
 
 
@@ -162,8 +162,14 @@ function appleIndex(fruit) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(strings) {
+  for(let i=0; i < strings.length; i++){
+    if(strings[i] === 'apple'){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
 
 
