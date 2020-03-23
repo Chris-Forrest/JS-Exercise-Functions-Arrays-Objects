@@ -75,35 +75,35 @@ function temperatureCtoF(temperatureC) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(temperatureF, temperatureC) {
-   if(temperatureF === temperatureF){
-      temperatureC = (temperatureF -32) * 5 / 9;
-         return Math.round(temperatureC);
+function temperatureInF(temperature, unit) {
+   if(unit === 'F'){
+      return temperature + unit ;
   }else{
-    temperatureCtoF(temperatureC);
-    return temperatureF;
+    unit = "F"
+    temperature = temperature *9 / 5 + 32;
+    return Math.round(temperature) +unit;
   }
 }
 
 
 /**
  * ### Challenge `makePersonObject`
+ * @instructions This function should take an id, a name and an email as arguments,
+and return an object with `id`, `name` and `email` properties.
+
+For example, if we invoke `makePersonObject`
+passing 5, 'Leia' and 'leia
+ * @leia .com' as arguments,
+the returned value should look like:
+{
+id: 5,
+name: "Leia",
+email: "leia@leia .com",
+}
  * 
- * @instructions
- * This function should take an id, a name and an email as arguments,
- * and return an object with `id`, `name` and `email` properties.
- * 
- * For example, if we invoke `makePersonObject`
- * passing 5, 'Leia' and 'leia@leia.com' as arguments,
- * the returned value should look like:
- * {
- *   id: 5,
- *   name: "Leia",
- *   email: "leia@leia.com",
- * }
-*/
-function makePersonObject(/* code here */) {
-  /* code here */
+ */
+function makePersonObject() {
+     
 }
 
 /**
