@@ -79,9 +79,10 @@ function temperatureInF(temperature, unit) {
    if(unit === 'F'){
       return temperature + unit ;
   }else{
-    unit = "F"
-    temperature = temperature *9 / 5 + 32;
-    return Math.round(temperature) +unit;
+    unit = 'F'
+    return temperatureCtoF(temperature) + unit;
+    //temperature = temperature *9 / 5 + 32;
+    //return Math.round(temperature) +unit;
   }
 }
 
@@ -90,7 +91,6 @@ function temperatureInF(temperature, unit) {
  * ### Challenge `makePersonObject`
  * @instructions This function should take an id, a name and an email as arguments,
 and return an object with `id`, `name` and `email` properties.
-
 For example, if we invoke `makePersonObject`
 passing 5, 'Leia' and 'leia
  * @leia .com' as arguments,
@@ -100,10 +100,14 @@ id: 5,
 name: "Leia",
 email: "leia@leia .com",
 }
- * 
  */
-function makePersonObject() {
-     
+function makePersonObject(id , name , email) {
+     const person = {
+       id:id,
+       name:name,
+       email:email,
+     }
+     return person;
 }
 
 /**
@@ -119,8 +123,8 @@ function makePersonObject() {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(name) {
+  return 'Hello, my name is '+ name;
 }
 
 
@@ -139,8 +143,8 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(fruit) {
+  return fruit.indexOf('apple');
 }
 
 /**
