@@ -163,13 +163,15 @@ function appleIndex(fruit) {
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(strings) {
+  let booleanArray = [];
   for(let i=0; i < strings.length; i++){
     if(strings[i] === 'apple'){
-      return true;
+      booleanArray.push(true);
     }else{
-      return false;
+       booleanArray.push(false);
     }
   }
+  return booleanArray;
 }
 
 
@@ -227,7 +229,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+ // for (let i =0; i < inventory.length; i++){
+   // if(inventory [i]('id')=== id)
+    // let car = inventory[i];
+ // }
 }
 
 /**
